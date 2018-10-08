@@ -1,0 +1,23 @@
+<p [class]="textClass">Overall How Was Your Workout?</p>
+<div [class]="emojiContainer">
+  <div (click)="selectEmoji({value: 'great'})">
+    <span for="great">😁</span>
+    <label name="great" id="great">Great!</label>
+  </div>
+  <div (click)="selectEmoji({value: 'good'})">
+    <span for="good">😃</span>
+    <label name="good" id="good">Good</label>
+  </div>
+  <div (click)="selectEmoji({value: 'okay'})">
+    <span for="okay">🙂</span>
+    <label name="okay" id="okay">Okay</label>
+  </div>
+  <div (click)="selectEmoji({value: 'not bad'})">
+    <span for="not bad">🙁</span>
+    <label name="not bad" id="not-bad">Not Bad</label>
+  </div>
+  <div (click)="selectEmoji({value: 'bad'})">
+    <span for="bad">😩</span>
+    <label name="bad" id="bad">Bad</label>
+  </div>
+</div>

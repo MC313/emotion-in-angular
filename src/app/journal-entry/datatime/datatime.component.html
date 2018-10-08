@@ -1,0 +1,6 @@
+<p [class]="textClass">When was your workout?</p>
+<form [class]="formClass" [formGroup]="dataTimeForm" (ngSubmit)="submit()">
+  <input type="date" formControlName="entryDate">
+  <input type="time" formControlName="entryTime">
+  <button [class]="buttonClass">Next ▶</button>
+</form>

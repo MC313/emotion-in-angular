@@ -1,0 +1,7 @@
+<p [class]="textClass">What did you work on?</p>
+<form [class]="formClass" [formGroup]="muscleForm" (ngSubmit)="submit()">
+  <select [class]="inputClass" name="muscle group" formControlName="muscles">
+    <option *ngFor="let muscle of musclesList" [value]="muscle">{{muscle}}</option>
+  </select>
+  <button [class]="buttonClass" [disabled]="!muscleForm.valid">Next ▶</button>
+</form>

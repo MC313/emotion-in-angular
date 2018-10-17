@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 import { css } from 'emotion';
-import { center, colors, fillSpace, flex, font } from '../styles';
+import { center, colors, fillSpace, flex, text } from '../styles';
 
 @Component({
   selector: 'gj-root',
@@ -17,7 +17,7 @@ export class AppComponent {
   `
 
   textClass: string = css`
-    ${font.xl};
+    ${text.xl};
     color: ${colors.secondary};
     margin-bottom: 20px;
  `

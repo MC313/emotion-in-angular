@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { css } from 'emotion';
 
-import { flex, font, input, button, colors } from '../../../styles';
+import { flex, text, input, button, colors } from '../../../styles';
 
 @Component({
   selector: 'gj-datatime',
@@ -12,22 +12,18 @@ import { flex, font, input, button, colors } from '../../../styles';
 export class DatatimeComponent implements OnInit {
   dataTimeForm: FormGroup;
   textClass: string = css`
-    ${font.md};
-    color: ${colors.primary};
+    ${text.mdPrimary};
     margin-bottom: 30px;
   `
   formClass: string = css`
     ${flex.column};
     input { 
-      ${input.large};
-      font-size: 20px;
+      ${input.largePrimary};
       margin-bottom: 20px;
-      padding-left: 20px;
     }
   `
   buttonClass: string = css`
-    ${button.large};
-    ${button.primary};
+    ${button.largePrimary};
   `
   constructor(private fb: FormBuilder) { }
   @Output() submitted: EventEmitter<object> = new EventEmitter<object>();

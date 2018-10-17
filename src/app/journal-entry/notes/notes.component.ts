@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { css } from 'emotion';
 
-import { button, colors, font, flex, height, input } from '../../../styles';
+import { button, colors, text, flex, height, input } from '../../../styles';
 
 @Component({
   selector: 'gj-notes',
@@ -16,7 +16,7 @@ export class NotesComponent implements OnInit {
   @Output() submitted: EventEmitter<object> = new EventEmitter<object>();
 
   textClass: string = css`
-    ${font.md};
+    ${text.md};
     color: ${colors.primary};
     margin-bottom: 30px;
   `
@@ -24,12 +24,6 @@ export class NotesComponent implements OnInit {
   formClass: string = css`
     ${flex};
     ${flex.column};
-    input { 
-      ${input.large};
-      font-size: 20px;
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
   `
 
   inputClass: string = css`
@@ -38,8 +32,7 @@ export class NotesComponent implements OnInit {
   `
 
   buttonClass: string = css`
-    ${button.large};
-    ${button.primary};
+    ${button.largePrimary};
   `
   ngOnInit() {
     this.createForm();

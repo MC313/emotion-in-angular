@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { css } from 'emotion';
 
-import { button, colors, font, flex, height, input } from '../../../styles';
+import { button, colors, text, flex, height, input } from '../../../styles';
 
 @Component({
   selector: 'gj-muscle-group',
@@ -24,26 +24,19 @@ export class MuscleGroupComponent implements OnInit {
   ];
 
   textClass: string = css`
-    ${font.md};
-    color: ${colors.primary};
+    ${text.mdPrimary};
     margin-bottom: 30px;
   `
 
   formClass: string = css`
     ${flex};
     ${flex.column};
-    input { 
-      ${input.large};
-      font-size: 20px;
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
   `
 
   inputClass: string = css`
-    ${height(50)}
+    ${input.largePrimary};
+    ${height(50)};
     margin-bottom: 20px;
-    padding-left: 10px;
   `
 
   buttonClass: string = css`

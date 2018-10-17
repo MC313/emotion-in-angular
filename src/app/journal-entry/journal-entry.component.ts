@@ -3,7 +3,7 @@ import { EntryStepDirective } from './entry-step.directive';
 
 import { css } from 'emotion';
 
-import { center, colors, flex, widthHeight } from '../../styles';
+import { center, colors, flex, widthHeight, fillSpace } from '../../styles';
 
 @Component({
   selector: 'gj-journal-entry',
@@ -13,7 +13,7 @@ export class JournalEntryComponent implements AfterViewInit {
   hostClass: string = css`
     overflow: hidden;
     ${center};
-    flex-direction: column;
+    ${flex.column};
     max-width: 550px;
     ${widthHeight(70, 70, '%')};
     height: 340px;
@@ -22,7 +22,8 @@ export class JournalEntryComponent implements AfterViewInit {
   `
   containerClass: string = css`
     ${flex.row};
-    ${widthHeight(100, 80, '%')};
+    ${fillSpace};
+    transform: translateX(0%);
   `
 
   @HostBinding('class')
@@ -47,18 +48,17 @@ export class JournalEntryComponent implements AfterViewInit {
     if (this.arrayIndex < this.arrayLength - 1) {
       this.containerClass = css`
         ${flex.row};
-        ${widthHeight(100, 80, '%')};
-        transform: translateX(${-100 * this.arrayIndex++}%);
+        ${fillSpace};
+        transform: translateX(${-100 * (this.arrayIndex += 1)}%);
         transition: transform 0.3s ease;
       `
     } else {
+      this.arrayIndex = 0;
       this.containerClass = css`
         ${flex.row};
-        ${widthHeight(100, 80, '%')};
-        transform: translateX(${-100 * this.arrayIndex++}%);
-        transition: transform 0.3s ease;
+        ${fillSpace};
+        transform: translateX(${-100 * this.arrayIndex}%);
       `
-      this.arrayIndex = 0;
     };
   }
 

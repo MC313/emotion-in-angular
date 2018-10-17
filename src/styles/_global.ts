@@ -9,7 +9,7 @@ export const global = () => {
     }
 
     html {
-        font-size: 14px;
+        text-size: 14px;
     }
 
     html,
@@ -17,9 +17,13 @@ export const global = () => {
         min-width: 320px;
         width: 100%;
         height: 100vh;
-        margin: 0px;
-        padding: 0px;
         overflow: hidden;
+    }
+
+    input[type=date],
+    input[type=time] {
+        padding-left: 0px;
+        text-align: center;
     }
 
     input[type=date]::-webkit-inner-spin-button,
@@ -27,27 +31,5 @@ export const global = () => {
         -webkit-appearance: none;
         display: none;
     }
-
-    /******************************
-    Custom Styles
-    ******************************/
-    .wizard-step {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .emojis {
-        font-size: 8vmax;
-    }
-
-    .emoji {
-        margin: 0px 20px;
-        .emoji__icon {
-            font-size: 6vmin;
-        }
-        .emoji__label {
-            font-size: 3vmin;
-        }
-    } 
     `
 }

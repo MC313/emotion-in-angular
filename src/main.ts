@@ -6,7 +6,7 @@ import { environment } from './environments/environment';
 
 import { global } from './styles';
 
-// Sets global static styles
+// Sets global styles
 global();
 
 if (environment.production) {

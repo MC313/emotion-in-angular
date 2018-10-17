@@ -1,5 +1,6 @@
 import { css } from 'emotion';
 
+import { colors } from './_colors';
 
 const sizing = {
     xs: 0.8,
@@ -9,21 +10,85 @@ const sizing = {
     xl: 2.4
 }
 
-const setFontSize = (size: number, unit: string = 'rem') => css`
-    font-size: ${size}${unit};
+const xs = css`
+    font-size: ${sizing.xs}rem;
 `
+const sm = css`
+    font-size: ${sizing.sm}rem;
+`
+const md = css`
+    font-size: ${sizing.md}rem;
+`
+const lg = css`
+    font-size: ${sizing.lg}rem;
+`
+const xl = css`
+    font-size: ${sizing.xl}rem;
+`
+const primary = css`
+    color: ${colors.primary};
+`
+const secondary = css`
+    color: ${colors.secondary};
+`
+const xsPrimary = css`
+    ${xs};
+    ${primary};
+`
+const smPrimary = css`
+    ${sm};
+    ${primary};
+`
+const mdPrimary = css`
+    ${md};
+    ${primary};
+`
+const lgPrimary = css`
+    ${lg};
+    ${primary};
+`
+const xlPrimary = css`
+    ${xl};
+    ${primary};
+`
+const xsSecondary = css`
+    ${xs};
+    ${secondary};
+`
+const smSecondary = css`
+    ${sm};
+    ${secondary};
+`
+const mdSecondary = css`
+    ${md};
+    ${secondary};
+`
+const lgSecondary = css`
+    ${lg};
+    ${secondary};
+`
+const xlSecondary = css`
+    ${xl};
+    ${secondary};
+`
+export const setText = (size: number, unit: string, color: number) => css``
 
-const setFontColor = (color: string) => css`
-    color: ${color};
-`
-
-export const setFont = (size: number, unit: string, color: number) => css`
-    
-`
-export const font = {
-    xs: css`font-size: ${sizing.xs}rem`,
-    sm: css`font-size: ${sizing.sm}rem`,
-    md: css`font-size: ${sizing.md}rem`,
-    lg: css`font-size: ${sizing.lg}rem`,
-    xl: css`font-size: ${sizing.xl}rem`
+export const text = {
+    xs,
+    sm,
+    md,
+    lg,
+    xl,
+    primary,
+    secondary,
+    xsPrimary,
+    smPrimary,
+    mdPrimary,
+    lgPrimary,
+    xlPrimary,
+    xsSecondary,
+    smSecondary,
+    mdSecondary,
+    lgSecondary,
+    xlSecondary
 }
